@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section id="main">
+    <h1 id="title">{{ .Title }}</h1>
+    <p id="date">{{ .Date.Format "Mon Jan 2, 2006" }}</p>
+    <article id="content">{{ .Content }}</article>
+    <hr />
+    {{ with .Prev }}
+        <a href="{{ .Permalink }}">&lt;&lt; {{ .Title }}</a>
+    {{ end }}
+    {{ with .Next }}
+        <a href="{{ .Permalink }}" style="float: right;"> {{ .Title }} &gt;&gt;</a>
+    {{ end }}
+</section>
+{{ end }}

@@ -1,0 +1,11 @@
+<head>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ .Description }}">
+    <meta name="keywords" content="{{ .Keywords }}">
+    <link rel="stylesheet" href="/css/site.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+</head>
