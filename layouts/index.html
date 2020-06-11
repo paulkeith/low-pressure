@@ -7,7 +7,8 @@
     <div>
         {{ range first 1 .Site.RegularPages }} <!--TODO: No need for range here-->
             <!-- TODO: Pull this out to a reusable thing too.  layouts/summary.html? -->
-            <a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
+            <h1>{{ .Title }}</h1>
+            <p id="date">{{ .Date.Format "Mon Jan 2, 2006" }}</p>
             {{ .Content }}
             <hr />
             {{ with .Prev }}

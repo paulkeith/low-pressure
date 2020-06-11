@@ -1,0 +1,12 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $description := .Get "description" -}}
+
+<div class="responsive">
+    <div class="gallery">
+        <a target="_blank" href="{{$src}}">
+            <img src="{{$src}}" alt="{{$alt}}">
+        </a>
+    </div>
+</div>
+<div class="clearfix"></div>
