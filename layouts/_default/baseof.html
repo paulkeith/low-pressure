@@ -16,7 +16,7 @@
                     <a href="/index.xml">[rss]</a>
                     <a href="/posts">[all]</a>
                     <h2>Latest posts</h2>
-                    {{ range first 5 .Site.RegularPages }}
+                    {{ range where .Site.RegularPages "Section" "==" "posts" | first 5 }}
                         <!-- TODO: Pull this out to a reusable thing too.  layouts/summary.html? -->
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         {{ .Description }}
