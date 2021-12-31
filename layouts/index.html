@@ -5,7 +5,7 @@
         {{.Content}}
     </div>
     <div>
-        {{ range first 1 .Site.RegularPages }} <!--TODO: No need for range here-->
+        {{ range where .Site.RegularPages "Section" "==" "posts" | first 1 }} <!--TODO: No need for range here-->
             <!-- TODO: Pull this out to a reusable thing too.  layouts/summary.html? -->
             <h1>{{ .Title }}</h1>
             <p id="date">{{ .Date.Format "Mon Jan 2, 2006" }}</p>
