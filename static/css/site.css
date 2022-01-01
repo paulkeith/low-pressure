@@ -76,14 +76,24 @@ div.gallery img {
     /* object-fit: cover; */
 }
 
-.responsive {
-    padding: 0 6px;
+.responsive-3 {
+    padding: 6px;
     float: left;
     width: 33.3333%;
 }
 
+.responsive-2 {
+    padding: 6px;
+    float: left;
+    width: 50%;
+}
+
 @media only screen and (max-width: 500px) {
-    .responsive {
+    .responsive-3 {
+        width: 100%;
+    }
+
+    .responsive-2 {
         width: 100%;
     }
 }
