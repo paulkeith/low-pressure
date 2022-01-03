@@ -88,6 +88,18 @@ div.gallery img {
     width: 50%;
 }
 
+.img-1 {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-1:hover {
+    border: 1px solid #777;
+}
+
 @media only screen and (max-width: 500px) {
     .responsive-3 {
         width: 100%;
