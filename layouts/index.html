@@ -11,10 +11,10 @@
             <p id="date">{{ .Date.Format "Mon Jan 2, 2006" }}</p>
             {{ .Content }}
             <hr />
-            {{ with .Prev }}
+            {{ with .PrevInSection }}
                 <a href="{{ .Permalink }}">&lt;&lt; {{ .Title }}</a>
             {{ end }}
-            {{ with .Next }}
+            {{ with .NextInSection }}
                 <a href="{{ .Permalink }}" style="float: right;"> {{ .Title }} &gt;&gt;</a>
             {{ end }}
         {{ end }}
