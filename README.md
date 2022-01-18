@@ -9,7 +9,7 @@ There's no tracking and no analytics.
 ## Installation
 Add this theme as a Git submodule inside your Hugo site folder:
 ```
-git submodule add https://github.com/prophecymattress/nerdgasm.git themes/nerdgasm
+git submodule add https://github.com/paulkeith/low-pressure.git themes/low-pressure
 ```
 
-Then point your config file at the themes/nerdgasm directory.
+Then point your config file at the themes/low-pressure directory.
