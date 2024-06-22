@@ -1,0 +1,14 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{ $imageName := .Get "src" }}
+{{ $image := $.Page.Resources.GetMatch $imageName }}
+{{ $resized := $image.Process "resize 600x" }}
+
+<div class="responsive-2">
+    <div class="gallery">
+        <a target="_blank" href="{{ $image.RelPermalink }}">
+            <img src="{{ $resized.RelPermalink }}" alt="{{$alt}}">
+        </a>
+    </div>
+</div>
+<div class="clearfix"></div>
